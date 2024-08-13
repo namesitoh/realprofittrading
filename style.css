@@ -1,0 +1,292 @@
+/* Estilos para el body */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1C1F2D; /* Color principal */
+    color: #F5F6FA; /* Color de textos primarios */
+    position: relative; /* Necesario para el posicionamiento de la imagen */
+}
+
+/* Espacio para la imagen de fondo */
+.background-image {
+    position: fixed; /* Fija la imagen al fondo de la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Envía la imagen detrás de todo el contenido */
+    background-image: url('background.png');
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    opacity: 0.8; /* Controla la transparencia de la imagen */
+}
+
+/* Elimina o ajusta cualquier estilo previo para otras imágenes de fondo */
+
+
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #303447; /* Color secundario */
+    color: #F5F6FA; /* Textos primarios */
+    padding: 10px 20px;
+}
+
+.navbar img {
+    height: 50px; /* Ajusta el tamaño del logo */
+}
+
+.navbar div {
+    display: flex;
+    gap: 15px; /* Espacio entre los elementos del navbar */
+}
+
+.navbar a {
+    color: #F5F6FA; /* Textos primarios */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 8px 15px;
+    border-radius: 5px; /* Bordes redondeados para los enlaces */
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    background-color: #1C1F2D; /* Color principal en hover */
+}
+
+/* Estilos para el contenedor de la página */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #A4A5AB; /* Textos secundarios */
+    text-align: center; /* Centra el texto en el contenedor */
+}
+
+/* Estilos para los encabezados y párrafos */
+.container h1 {
+    color: #F5F6FA; /* Textos primarios / títulos */
+    font-size: 3.5em; /* Tamaño de fuente más grande para el título */
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    color: #F5F6FA; /* Textos primarios / títulos */
+    font-size: 2em; /* Tamaño de fuente para subtítulos */
+}
+
+/* Estilos para el texto debajo del título de bienvenida */
+.container h3 {
+    color: #A4A5AB; /* Color de descripciones */
+    font-size: 1.2em; /* Tamaño de fuente aumentado para el texto */
+    text-align: center; /* Centra el texto */
+    margin: 0 auto; /* Asegura que el párrafo se centre dentro de su contenedor */
+    max-width: 800px; /* Limita el ancho del párrafo para mejorar la legibilidad */
+}
+
+.container p {
+    color: #A4A5AB; /* Textos secundarios */
+    
+}
+
+/* Estilos para las tarjetas de productos */
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en la página */
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: #303447; /* Color secundario para las tarjetas */
+    border: 1px solid #1C1F2D; /* Borde con color principal */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    width: 250px; /* Ancho fijo para las tarjetas */
+    text-align: center; /* Centra el texto en las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efectos de transición */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Levanta la tarjeta al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+.product-card h3 {
+    margin: 0;
+    color: #F5F6FA; /* Título de las tarjetas */
+}
+
+.product-card p {
+    margin: 10px 0;
+    color: #A4A5AB; /* Descripción de las tarjetas */
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #F5F6FA; /* Precio en las tarjetas */
+}
+
+.btn-more-info {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #1C1F2D; /* Color principal para el botón */
+    color: #F5F6FA; /* Textos primarios */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    font-weight: 500;
+}
+
+.btn-more-info:hover {
+    background-color: #303447; /* Color secundario en hover */
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto; /* Añadido margen superior e inferior */
+    border-radius: 10px; /* Bordes redondeados para el carrusel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    background-color: #303447; /* Fondo del carrusel con color secundario */
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    color: #F5F6FA; /* Textos primarios en los testimonios */
+}
+
+/* Estilos para los botones del carrusel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    background-color: #1C1F2D; /* Color principal */
+    color: #F5F6FA; /* Textos primarios */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #303447; /* Color secundario */
+    color: #F5F6FA; /* Textos primarios */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Asegura que el footer cubra todo el ancho de la página */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    margin: 0; /* Elimina cualquier margen adicional */
+}
+
+.footer a {
+    color: #F5F6FA; /* Textos primarios */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}
+
+/* Estilos para las tarjetas */
+.card {
+    background-color: #303447; /* Color secundario para las tarjetas */
+    border: 1px solid #1C1F2D; /* Borde con color principal */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    margin: 20px auto; /* Margen para centrar las tarjetas */
+    max-width: 800px; /* Ancho máximo para las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Ajustes para los encabezados dentro de las tarjetas */
+.card h2 {
+    color: #F5F6FA; /* Color de textos primarios */
+    font-size: 2em; /* Tamaño de fuente para los encabezados */
+    margin-bottom: 15px;
+}
+
+/* Ajustes para los párrafos dentro de las tarjetas */
+.card p, .card ul {
+    color: #A4A5AB; /* Color de textos secundarios */
+    font-size: 1em; /* Tamaño de fuente para el texto de las tarjetas */
+}
+
+/* Ajustes para las listas dentro de las tarjetas */
+.card ul {
+    list-style-type: disc; /* Marcadores para las listas */
+    padding-left: 20px; /* Espaciado para las listas */
+}
+
+/* Estilos para las tarjetas de contacto y login */
+.card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card label {
+    font-size: 1em;
+    color: #F5F6FA; /* Color de textos primarios */
+}
+
+.card input, .card textarea {
+    padding: 10px;
+    border: 1px solid #A4A5AB; /* Color de borde */
+    border-radius: 5px;
+    background-color: #1C1F2D; /* Color de fondo de los campos */
+    color: #F5F6FA; /* Color de texto en los campos */
+}
+
+.card button {
+    padding: 10px 15px;
+    background-color: #1C1F2D; /* Color principal para el botón */
+    color: #F5F6FA; /* Color de texto en el botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.card button:hover {
+    background-color: #303447; /* Color secundario en hover */
+}
